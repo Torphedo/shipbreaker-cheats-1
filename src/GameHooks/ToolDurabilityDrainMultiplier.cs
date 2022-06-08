@@ -9,7 +9,7 @@ namespace Torphedo.Shipbreaker.Cheats
     {
         public static bool Prefix(ref float __result)
         {
-            if (CheatSettings.NoDurabilityDrainEnabled)
+            if (CheatSettings.InfiniteDurability)
             {
                 __result = 0;
                 return false;

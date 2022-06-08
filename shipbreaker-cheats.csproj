@@ -25,6 +25,9 @@
     <Reference Include="UnityEngine.PhysicsModule" CopyToPublishDirectory="Never">
       <HintPath>.\externals\UnityEngine.PhysicsModule.dll</HintPath>
     </Reference>
+	<Reference Include="Carbon.Core">
+      <HintPath>.\externals\Carbon.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Carbon.Core.Unity">
       <HintPath>.\externals\Carbon.Core.Unity.dll</HintPath>
     </Reference>

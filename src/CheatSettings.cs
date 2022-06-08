@@ -1,4 +1,5 @@
 using BBI.Unity.Game;
+using Carbon.Core;
 
 namespace Torphedo.Shipbreaker.Cheats
 {
@@ -12,8 +13,10 @@ namespace Torphedo.Shipbreaker.Cheats
                 {
                     return false;
                 }
-
-                return true; // TODO: Setting
+                else
+                {
+                    return true;
+                }
             }
         }
 
@@ -21,27 +24,29 @@ namespace Torphedo.Shipbreaker.Cheats
         {
             get
             {
-                if (!CheatsEnabled)
+                if (GlobalOptions.Raw.GetBool("General.FreeUpgrades", false))
+                {
+                    return true; 
+                }
+                else 
                 {
                     return false;
                 }
-
-                // TODO: Setting
-                return true; //GlobalOptions.Raw.GetBool("General.FreeUpgrades", false);
             }
         }
 
-        public static bool NoDurabilityDrainEnabled
+        public static bool InfiniteDurability
         {
             get
             {
-                if (!CheatsEnabled)
+                if (GlobalOptions.Raw.GetBool("General.InfiniteDurability", false) && CheatsEnabled)
+                {
+                    return true;
+                }
+                else
                 {
                     return false;
                 }
-
-                // TODO: Setting
-                return true;
             }
         }
 
@@ -49,25 +54,29 @@ namespace Torphedo.Shipbreaker.Cheats
         {
             get
             {
-                if (!CheatsEnabled)
+                if (GlobalOptions.Raw.GetBool("General.InfiniteTethers", false) && CheatsEnabled)
+                {
+                    return true;
+                }
+                else
                 {
                     return false;
                 }
-
-                return true; // TODO: Setting
             }
         }
 
-        public static float SingerMeltTime
+        public static float StingerMeltTime
         {
             get
             {
-                if (!CheatsEnabled)
+                if (CheatsEnabled)
+                {
+                    return GlobalOptions.Raw.GetFloat("General.StingerMeltTime", 1f);
+                }
+                else
                 {
                     return -1;
                 }
-
-                return 1; // TODO: Setting
             }
         }
 
@@ -75,25 +84,29 @@ namespace Torphedo.Shipbreaker.Cheats
         {
             get
             {
-                if (!CheatsEnabled)
+                if (GlobalOptions.Raw.GetBool("General.NoCutterHeat", false) && CheatsEnabled)
+                {
+                    return true;
+                }
+                else
                 {
                     return false;
                 }
-
-                return true; // TODO: Setting
             }
         }
 
-        public static int StingerCutGrade
+        public static float StingerCutGrade
         {
             get
             {
-                if (!CheatsEnabled)
+                if (CheatsEnabled)
+                {
+                    return GlobalOptions.Raw.GetFloat("General.StingerCutGrade", 1f);
+                }
+                else
                 {
                     return -1;
                 }
-
-                return 5; // TODO: Setting
             }
         }
     }

@@ -8,7 +8,7 @@ namespace Torphedo.Shipbreaker.Cheats
     {
         public static bool Prefix(ref float __result)
         {
-            var meltTimeOverride = CheatSettings.SingerMeltTime;
+            var meltTimeOverride = CheatSettings.StingerMeltTime;
 
             if (meltTimeOverride >= 0)
             {
