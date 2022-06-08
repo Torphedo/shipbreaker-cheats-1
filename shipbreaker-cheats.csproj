@@ -37,5 +37,8 @@
     <Reference Include="InControl">
       <HintPath>.\externals\InControl.dll</HintPath>
     </Reference>
+	<Reference Include="System">
+      <HintPath>.\externals\System.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>
