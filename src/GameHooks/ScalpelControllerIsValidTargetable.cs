@@ -4,8 +4,8 @@ using HarmonyLib;
 
 namespace Torphedo.Shipbreaker.Cheats
 {
-    [HarmonyPatch(typeof(CuttingToolController), "IsValidTargetable")]
-    public static class CuttingToolControllerIsValidTargetable
+    [HarmonyPatch(typeof(ScalpelController), "IsValidTargetable")]
+    public static class ScalpelControllerIsValidTargetable
     {
         public static bool Prefix(ref bool __result, StructurePart part)
         {
@@ -27,13 +27,7 @@ namespace Torphedo.Shipbreaker.Cheats
             // TODO: This introduces some incompatibility when cheats are enabled if the base game (or another mod) wants to change this logic.
             // We should use transpilation to replace the call to this.mData.PowerRating instead.
 
-            if (part?.CuttingTargetable?.IsScalpelCuttable() != true || !EntityBlueprintComponent.IsValid(part.EntityBlueprintComponent))
-            {
-                __result = false;
-                return false;
-            }
-
-            if (part.Group != null && !EntityBlueprintComponent.IsValid(part.Group.EntityBlueprintComponent))
+            if (part?.CuttingTargetable?.IsScalpelCuttable() != true || !EntityBlueprintComponent.IsValid(part.EntityBlueprintComponent) || (part.Group != null && !EntityBlueprintComponent.IsValid(part.Group.EntityBlueprintComponent)))
             {
                 __result = false;
                 return false;
