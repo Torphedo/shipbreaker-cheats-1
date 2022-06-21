@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="src\GameHooks\CuttingToolControllerIsValidTargetable.cs" />
+    <None Include="src\GameHooks\ScalpelControllerIsValidTargetable.cs" />
   </ItemGroup>
 
   <ItemGroup>
