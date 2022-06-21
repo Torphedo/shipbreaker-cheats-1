@@ -105,7 +105,7 @@ namespace Torphedo.Shipbreaker.Cheats
                 }
                 else
                 {
-                    return -1;
+                    return 1f;
                 }
             }
         }

@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="src\GameHooks\CuttingToolControllerIsValidTargetable.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="BepInEx.Harmony">
       <HintPath>.\externals\BepInEx.Harmony.dll</HintPath>
     </Reference>
