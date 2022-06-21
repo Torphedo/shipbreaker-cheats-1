@@ -71,7 +71,7 @@ namespace Torphedo.Shipbreaker.Cheats
             {
                 if (CheatsEnabled)
                 {
-                    return GlobalOptions.Raw.GetFloat("General.StingerMeltTime", 1f);
+                    return GlobalOptions.Raw.GetFloat("General.StingerMeltTime", -1f);
                 }
                 else
                 {
