@@ -26,6 +26,7 @@ InControl.dll
 UnityEngine.CoreModule.dll
 UnityEngine.dll
 UnityEngine.PhysicsModule.dll
+Unity.Entities.dll
 ```
 
 After copying all of these DLLs, open the project in your IDE and build it.
