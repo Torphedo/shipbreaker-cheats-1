@@ -124,6 +124,21 @@ namespace Torphedo.Shipbreaker.Cheats
                 }
             }
         }
+        public static bool TroutModeEnabled
+        {
+            get
+            {
+                if (GlobalOptions.Raw.GetBool("General.TroutMode", false) && CheatsEnabled)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
         public static bool NoClipEnabled
         {
             get
