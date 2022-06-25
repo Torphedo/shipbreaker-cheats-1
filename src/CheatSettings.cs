@@ -109,5 +109,20 @@ namespace Torphedo.Shipbreaker.Cheats
                 }
             }
         }
+
+        public static bool GodModeEnabled
+        {
+            get
+            {
+                if (GlobalOptions.Raw.GetBool("General.GodMode", false) && CheatsEnabled)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
     }
 }
