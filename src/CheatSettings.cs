@@ -80,21 +80,6 @@ namespace Torphedo.Shipbreaker.Cheats
             }
         }
 
-        public static bool InfiniteHeat
-        {
-            get
-            {
-                if (GlobalOptions.Raw.GetBool("General.NoCutterHeat", false) && CheatsEnabled)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-        }
-
         public static float StingerCutGrade
         {
             get
@@ -106,6 +91,21 @@ namespace Torphedo.Shipbreaker.Cheats
                 else
                 {
                     return 1f;
+                }
+            }
+        }
+
+        public static bool InfiniteHeat
+        {
+            get
+            {
+                if (GlobalOptions.Raw.GetBool("General.NoCutterHeat", false) && CheatsEnabled)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
                 }
             }
         }
