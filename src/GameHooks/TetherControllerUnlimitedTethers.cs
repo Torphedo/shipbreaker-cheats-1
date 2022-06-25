@@ -10,6 +10,7 @@ namespace Torphedo.Shipbreaker.Cheats
         {
             if (CheatSettings.UnlimitedTethersEnabled)
             {
+                // This doesn't work anymore, BBI must've changed the infinite tether logic somewhere.
                 __result = true;
                 return false;
             }

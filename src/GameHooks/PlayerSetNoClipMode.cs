@@ -14,11 +14,11 @@ namespace Torphedo.Shipbreaker.Cheats
             {
                 if (collider != null)
                 {
-                    collider.isTrigger = CheatSettings.NoClipEnabled;
+                    collider.isTrigger = true;
                 }
                 if (playerMotion != null)
                 {
-                    playerMotion.SetSquishyCollide(!CheatSettings.NoClipEnabled);
+                    playerMotion.SetSquishyCollide(false);
                 }
                 return false;
             }

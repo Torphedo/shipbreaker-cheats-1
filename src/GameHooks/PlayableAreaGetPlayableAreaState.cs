@@ -9,6 +9,7 @@ namespace Torphedo.Shipbreaker.Cheats
     {
         public static bool Prefix(ref PlayableArea.PlayableAreaState __result)
         {
+            // Always tell the game the player is in a safe zone
             __result = PlayableArea.PlayableAreaState.Safe;
             return false;
         }

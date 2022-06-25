@@ -8,14 +8,13 @@ namespace Torphedo.Shipbreaker.Cheats
     {
         public static bool Prefix(ref float __result)
         {
-            var meltTimeOverride = CheatSettings.StingerMeltTime;
-
-            if (meltTimeOverride >= 0)
+            if (CheatSettings.StingerMeltTime >= 0)
             {
-                __result = meltTimeOverride;
+                // Cheat enabled, use custom melt time
+                __result = CheatSettings.StingerMeltTime;
                 return false;
             }
-
+            // Cheat disabled, use original game logic
             return true;
         }
     }

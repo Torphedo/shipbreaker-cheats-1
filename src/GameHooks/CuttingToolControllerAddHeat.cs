@@ -11,6 +11,7 @@ namespace Torphedo.Shipbreaker.Cheats
         {
             if (CheatSettings.InfiniteHeat)
             {
+                // Skip AddHeat() function if enabled
                 return false;
             }
 

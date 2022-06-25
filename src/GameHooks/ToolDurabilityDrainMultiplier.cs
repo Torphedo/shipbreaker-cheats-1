@@ -11,7 +11,7 @@ namespace Torphedo.Shipbreaker.Cheats
         {
             if (CheatSettings.InfiniteDurability)
             {
-                __result = 0;
+                __result = 0f;
                 return false;
             }
 
