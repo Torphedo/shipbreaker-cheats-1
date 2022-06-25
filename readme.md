@@ -1,6 +1,9 @@
 # Shipbreaker Cheats
 
-This repo contains a mod for Hardspace: Shipbreaker that re-enables many debug functions, and adds some new cheats. The mod has finally been ported to BepInEx, but there are still some outstanding issues to fix.
+This repo contains a mod for Hardspace: Shipbreaker that re-enables many debug functions, and adds some new cheats. The mod is now using BepInEx, but there are still a few issues to fix.
+
+### Known Issues
+- None of the keybinds are implemented
 
 ## Installation
 Installation Steps:
@@ -30,4 +33,4 @@ Unity.Entities.dll
 ```
 
 After copying all of these DLLs, open the project in your IDE and build it.
-Assuming you have BepInEx installed, place the DLL in the `plugins` folder.
+Assuming you have BepInEx installed, place the DLL in the `plugins` folder and run the game.
