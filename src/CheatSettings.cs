@@ -124,5 +124,19 @@ namespace Torphedo.Shipbreaker.Cheats
                 }
             }
         }
+        public static bool NoClipEnabled
+        {
+            get
+            {
+                if (GlobalOptions.Raw.GetBool("General.NoClip", false) && CheatsEnabled)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
     }
 }
