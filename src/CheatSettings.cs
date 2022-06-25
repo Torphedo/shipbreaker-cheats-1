@@ -65,6 +65,21 @@ namespace Torphedo.Shipbreaker.Cheats
             }
         }
 
+        public static bool AlwaysAcceptSalvage
+        {
+            get
+            {
+                if (GlobalOptions.Raw.GetBool("General.AlwaysAcceptSalvage", false) && CheatsEnabled)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
         public static float StingerMeltTime
         {
             get
