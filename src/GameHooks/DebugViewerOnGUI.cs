@@ -12,7 +12,7 @@ namespace Torphedo.Shipbreaker.Cheats
     [HarmonyPatch(typeof(DebugViewer), "OnGUI")]
     public static class DebugViewerOnGUI
     {
-        public static bool Prefix(Entity entity, EntityManager entityManager)
+        public static bool Prefix()
         {
 			/*  TODO: Find a way to patch in these GUILayout lines in
                 preparation for adding keybinds in the future      */
