@@ -9,14 +9,7 @@ namespace Torphedo.Shipbreaker.Cheats
         {
             get
             {
-                if (GameSession.CurrentSessionType == GameSession.SessionType.WeeklyShip)
-                {
-                    return false;
-                }
-                else
-                {
-                    return true;
-                }
+                return (GameSession.CurrentSessionType == GameSession.SessionType.WeeklyShip);
             }
         }
 
@@ -26,7 +19,7 @@ namespace Torphedo.Shipbreaker.Cheats
             {
                 if (GlobalOptions.Raw.GetBool("General.FreeUpgrades", false))
                 {
-                    return true; 
+                    return true;
                 }
                 else 
                 {
