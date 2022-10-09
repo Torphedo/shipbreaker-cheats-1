@@ -5,7 +5,7 @@ using HarmonyLib;
 namespace Torphedo.Shipbreaker.Cheats
 {
     [HarmonyPatch(typeof(CuttingToolController), "AddHeat")]
-    public static class CuttingToolControllerAddHeat
+    public static class InfiniteHeat
     {
         public static bool Prefix()
         {
