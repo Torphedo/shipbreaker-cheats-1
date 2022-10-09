@@ -1,13 +1,10 @@
-﻿
-using BBI.Unity.Game;
-using BBI.Core.Utility;
-using Unity.Entities;
+﻿using BBI.Unity.Game;
 using HarmonyLib;
 
 namespace Torphedo.Shipbreaker.Cheats
 {
-    [HarmonyPatch(typeof(DebugViewer), "Update")]
-    public static class DebugViewerUpdate
+    [HarmonyPatch(typeof(BBI.Core.Utility.DebugViewer), "Update")]
+    public static class DebugViewer
     {
         public static bool Prefix()
         {

@@ -1,5 +1,4 @@
-﻿
-using BBI.Unity.Game;
+﻿using BBI.Unity.Game;
 using Unity.Entities;
 using HarmonyLib;
 

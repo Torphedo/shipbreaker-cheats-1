@@ -1,4 +1,3 @@
-
 using HarmonyLib;
 
 namespace Torphedo.Shipbreaker.Cheats
