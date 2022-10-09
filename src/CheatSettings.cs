@@ -9,7 +9,7 @@ namespace Torphedo.Shipbreaker.Cheats
         {
             get
             {
-                return (GameSession.CurrentSessionType == GameSession.SessionType.WeeklyShip);
+                return !(GameSession.CurrentSessionType == GameSession.SessionType.WeeklyShip);
             }
         }
 
