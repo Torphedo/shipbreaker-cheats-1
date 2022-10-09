@@ -17,14 +17,7 @@ namespace Torphedo.Shipbreaker.Cheats
         {
             get
             {
-                if (GlobalOptions.Raw.GetBool("General.FreeUpgrades", false))
-                {
-                    return true;
-                }
-                else 
-                {
-                    return false;
-                }
+                return (GlobalOptions.Raw.GetBool("General.FreeUpgrades", false));
             }
         }
 
@@ -32,14 +25,7 @@ namespace Torphedo.Shipbreaker.Cheats
         {
             get
             {
-                if (GlobalOptions.Raw.GetBool("General.InfiniteDurability", false) && CheatsEnabled)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                return (GlobalOptions.Raw.GetBool("General.InfiniteDurability", false) && CheatsEnabled);
             }
         }
 
@@ -47,14 +33,7 @@ namespace Torphedo.Shipbreaker.Cheats
         {
             get
             {
-                if (GlobalOptions.Raw.GetBool("General.InfiniteTethers", false) && CheatsEnabled)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                return (GlobalOptions.Raw.GetBool("General.InfiniteTethers", false) && CheatsEnabled);
             }
         }
 
@@ -62,14 +41,7 @@ namespace Torphedo.Shipbreaker.Cheats
         {
             get
             {
-                if (GlobalOptions.Raw.GetBool("General.AlwaysAcceptSalvage", false) && CheatsEnabled)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                return (GlobalOptions.Raw.GetBool("General.AlwaysAcceptSalvage", false) && CheatsEnabled);
             }
         }
 
@@ -107,28 +79,14 @@ namespace Torphedo.Shipbreaker.Cheats
         {
             get
             {
-                if (GlobalOptions.Raw.GetBool("General.GodMode", false) && CheatsEnabled)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                return (GlobalOptions.Raw.GetBool("General.GodMode", false) && CheatsEnabled);
             }
         }
         public static bool TroutModeEnabled
         {
             get
             {
-                if (GlobalOptions.Raw.GetBool("General.TroutMode", false) && CheatsEnabled)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                return (GlobalOptions.Raw.GetBool("General.TroutMode", false) && CheatsEnabled);
             }
         }
 
@@ -136,14 +94,7 @@ namespace Torphedo.Shipbreaker.Cheats
         {
             get
             {
-                if (GlobalOptions.Raw.GetBool("General.NoClip", false) && CheatsEnabled)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                return (GlobalOptions.Raw.GetBool("General.NoClip", false) && CheatsEnabled);
             }
         }
     }
