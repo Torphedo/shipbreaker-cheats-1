@@ -21,13 +21,15 @@ To build a DLL of the mod yourself, make a new folder next to `shipbreaker-cheat
 
 ```
 0Harmony.dll
-BBI.Unity.Game.dll
 BepInEx.dll
 BepInEx.Harmony.dll
+BBI.Unity.Game.dll
 Carbon.Core.Unity.dll
+Carbon.Localization.Core.dll
 InControl.dll
-UnityEngine.CoreModule.dll
 UnityEngine.dll
+UnityEngine.CoreModule.dll
+UnityEngine.IMGUIModule.dll
 UnityEngine.PhysicsModule.dll
 Unity.Entities.dll
 ```

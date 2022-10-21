@@ -8,49 +8,27 @@ namespace Torphedo.Shipbreaker.Cheats
     [HarmonyPatch(typeof(Player), "SetGodMode")]
     public static class GodMode
     {
-        public static bool Prefix(Entity entity, EntityManager entityManager)
+        public static void Prefix(ref bool enabled)
         {
-            if (CheatSettings.GodModeEnabled)
-            {
-                entityManager.AddComponentData<Invulnerable>(entity, default(Invulnerable));
-                return false;
-            }
-            return true;
+            enabled = CheatSettings.GodModeEnabled;
         }
     }
 
     [HarmonyPatch(typeof(Player), "SetNoClipMode")]
     public static class NoClip
     {
-        public static bool Prefix(Collider collider, PlayerMotion playerMotion, bool enabled)
+        public static void Prefix(ref bool enabled)
         {
-            if (CheatSettings.NoClipEnabled)
-            {
-                if (collider != null)
-                {
-                    collider.isTrigger = true;
-                }
-                if (playerMotion != null)
-                {
-                    playerMotion.SetSquishyCollide(false);
-                }
-                return false;
-            }
-            return true;
+            enabled = CheatSettings.NoClipEnabled;
         }
     }
 
     [HarmonyPatch(typeof(Player), "SetTroutMode")]
     public static class TroutMode
     {
-        public static bool Prefix(Entity entity, EntityManager entityManager)
+        public static void Prefix(ref bool enabled)
         {
-            if (CheatSettings.TroutModeEnabled)
-            {
-                entityManager.RemoveComponent<ReceiveForceOnDecompression>(entity);
-                return false;
-            }
-            return true;
+            enabled = CheatSettings.TroutModeEnabled;
         }
     }
 }

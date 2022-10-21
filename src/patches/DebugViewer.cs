@@ -3,6 +3,8 @@ using HarmonyLib;
 
 namespace Torphedo.Shipbreaker.Cheats
 {
+    /*
+    // Not working, spams console
     [HarmonyPatch(typeof(BBI.Core.Utility.DebugViewer), "Update")]
     public static class DebugViewer
     {
@@ -18,6 +20,17 @@ namespace Torphedo.Shipbreaker.Cheats
                 CertificationService.Instance.TryIncreaseCertification(false);
             }
             return true;
+        }
+    }
+    */
+
+    // Debug Menu
+    [HarmonyPatch(typeof(GameSession), "InitializeServices")]
+    public class GameSession_InitializeServices
+    {
+        public static void Prefix(ref Carbon.Core.Services.ServiceContext ___mSessionServices)
+        {
+            ___mSessionServices.AddService<DebugMenu>(new DebugMenu(), true);
         }
     }
 }

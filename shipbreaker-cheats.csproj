@@ -20,11 +20,17 @@
     <Reference Include="BepInEx" CopyToPublishDirectory="Never">
       <HintPath>.\externals\BepInEx.dll</HintPath>
     </Reference>
+    <Reference Include="Carbon.Localization.Core">
+      <HintPath>.\externals\Carbon.Localization.Core.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine" CopyToPublishDirectory="Never">
       <HintPath>.\externals\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule" CopyToPublishDirectory="Never">
       <HintPath>.\externals\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>.\externals\UnityEngine.IMGUIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.PhysicsModule" CopyToPublishDirectory="Never">
       <HintPath>.\externals\UnityEngine.PhysicsModule.dll</HintPath>
